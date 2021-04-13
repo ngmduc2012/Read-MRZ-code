@@ -28,10 +28,8 @@ typealias LumaListener = (luma: Double) -> Unit
 
 
 class MainActivity : AppCompatActivity() {
-    var text : String = ""
 
     lateinit var resultEditText: TextView
-    lateinit var btn: Button
 
     private var imageCapture: ImageCapture? = null
     private lateinit var outputDirectory: File
@@ -44,8 +42,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         resultEditText = findViewById(R.id.tv)
-        btn = findViewById(R.id.btn)
-        btn.setOnClickListener { resultEditText.text = text }
+
 
         // Request camera permissions
         if (allPermissionsGranted()) {
